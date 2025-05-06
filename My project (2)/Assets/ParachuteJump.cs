@@ -38,7 +38,7 @@ public class ParachuteJump : MonoBehaviour
             }
 
             // Apply downward movement
-            rb.velocity = new Vector3(0, fallSpeed, 0);
+            rb.linearVelocity = new Vector3(0, fallSpeed, 0);
         }
     }
 
@@ -47,7 +47,7 @@ public class ParachuteJump : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             hasLanded = true;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
 
             if (parachuteOpened)
             {
